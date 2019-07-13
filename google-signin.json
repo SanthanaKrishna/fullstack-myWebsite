@@ -1,0 +1,10 @@
+{
+    "web": {
+        "client_id": "754692025128-4h39eonrqk6tkio4b4aksr1pvb2oa42j.apps.googleusercontent.com",
+        "project_id": "fullstack-1562439185828",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret": "BXx4earKAJbhJdn5J7klwwZe"
+    }
+}
