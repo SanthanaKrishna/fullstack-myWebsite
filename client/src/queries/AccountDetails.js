@@ -12,11 +12,11 @@ const createAccountQuery = gql`
     }
  `
 
-const addAccountMutation = gql`
-    mutation($firstName:String!, $emailId:String!, $password:String!){
-        addAccount(firstName:$firstName, emailId:$number,password:$password){
+const createAccountMutation = gql`
+    mutation($firstName:String!, $lastName: String, $emailId:String!, $password:String!, $phoneNumber:String){
+        addAccount(firstName:$firstName, lastName:$lastName, emailId:$number, password:$password, phoneNumber:$phoneNumber){
             firstName
-            number
+            lastName
             emailId
             password
             phoneNumber
@@ -24,4 +24,4 @@ const addAccountMutation = gql`
     }
 `
 
-export { createAccountQuery, addAccountMutation }
+export { createAccountQuery, createAccountMutation }

@@ -11,7 +11,7 @@ class GoogleSign extends Component {
     //gapi(libary) is multipurpose Oauth google for all services 
     componentDidMount() {
         //loads js client library
- 
+
         window.gapi && window.gapi.load('auth2', () => {
 
             window.gapi.auth2.init({
@@ -43,7 +43,7 @@ class GoogleSign extends Component {
         this.setState({ isSignedIn })
     }
 
-    
+
     onSignInClick = () => {
         this.auth.signIn();
     }
@@ -75,7 +75,7 @@ class GoogleSign extends Component {
     render() {
         return (
             <div>
-               <div className="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                <div className="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
             </div>
         )
     }

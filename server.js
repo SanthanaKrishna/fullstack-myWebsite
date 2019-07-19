@@ -14,14 +14,17 @@ mongoose.connect(
     { useNewUrlParser: true }
 )
 
-mongoose.connection.once('open', () => {
-    console.log('database is connected with mongodb')
-})
+mongoose.connection
+    .once('open', () => console.log('database is connected with mongodb'))
+    .on('error', error => console.log('Error connecting to MongoLab:', error))
 
 app.use('/graphql', graphQLHTTP({
     schema,
     graphiql: true
 }))
-app.listen('4000', () => {
+app.listen('4000', (err) => {
+    if (err) {
+        return console.error(err);
+    }
     console.log('server started');
 })

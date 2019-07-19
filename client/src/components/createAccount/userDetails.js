@@ -42,8 +42,7 @@ class UserDetails extends React.Component {
 
 
     render() {
-        const { values, errors,isSubmitting } = this.props;
-        console.log('values,erross', errors, this.props);
+        const { values, errors, isSubmitting } = this.props;
         return (
             <div className="form-group">
                 <div>
@@ -116,7 +115,7 @@ class UserDetails extends React.Component {
                         required
                         value={values.confirmEmail}
                         onChange={(ev) => this.onInputChange(ev)}
-                        //onBlur={handleBlur}
+                    //onBlur={handleBlur}
                     />
                     <ErrorMessage name="confirmPassword" />
                 </div>

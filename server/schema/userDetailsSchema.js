@@ -1,7 +1,7 @@
 const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLSchema,
     GraphQLID, GraphQLString, GraphQLInt,
-    GraphQLNonNull } = graphql;
+    GraphQLNonNull, GraphQLList } = graphql;
 
 const UserDetailsDB = require('../models/userDetails');
 
@@ -13,9 +13,11 @@ const UserDetailsDB = require('../models/userDetails');
 const UserDetailsType = new GraphQLObjectType({
     name: 'UserDetails',
     fields: () => ({
-        userId: { type: GraphQLID },
-        name: { type: GraphQLString },
-        rollNo: { type: GraphQLInt }
+        firstName: { type: GraphQLString },
+        lastName: { type: GraphQLString },
+        emailId: { type: GraphQLString },
+        password: { type: GraphQLString },
+        phoneNumber: { type: GraphQLInt }
     })
 });
 
@@ -23,7 +25,7 @@ const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
         userDetails: {
-            type: UserDetailsType,
+            type: new GraphQLList(UserDetailsType),
             //  args: { rollNo: { type: GraphQLInt } },
             resolve(parent, args) {
                 console.log('sk', UserDetailsDB.find({}))
@@ -39,15 +41,19 @@ const Mutation = new GraphQLObjectType({
         addUser: {
             type: UserDetailsType,
             args: {
-                userId: { type: new GraphQLNonNull(GraphQLInt) },
-                name: { type: new GraphQLNonNull(GraphQLString) },
-                rollNo: { type: new GraphQLNonNull(GraphQLInt) }
+                firstName: { type: new GraphQLNonNull(GraphQLString) },
+                lastName: { type: new GraphQLNonNull(GraphQLString) },
+                emailId: { type: new GraphQLNonNull(GraphQLString) },
+                password: { type: new GraphQLNonNull(GraphQLString) },
+                phoneNumber: { type: GraphQLInt }
             },
             resolve(parent, args) {
-                let userDetails = new UserDetailsMock({
-                    userId: args.id,
-                    name: args.name,
-                    rollNo: args.rollNo
+                let userDetails = new UserDetailsDB({
+                    firstName: args.firstName,
+                    lastName: args.lastName,
+                    emailId: args.emailId,
+                    password: args.password,
+                    phoneNumber: args.phoneNumber
                 });
                 console.log('mutation', userDetails)
                 return userDetails.save()

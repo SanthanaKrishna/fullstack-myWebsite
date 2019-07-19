@@ -3,7 +3,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import { history } from '../history';
 import CreateAccount from './createAccount/CreateAccount';
 
-export const RouteComponent = () => {
+export const RootComponent = () => {
     return (
         <div className="container">
             <Router history={history}>
