@@ -1,11 +1,12 @@
 import { gql } from 'apollo-boost';
 
 const getProfileDetails = gql`
-    query($emailId:String){
-        profileDetails(emailId: $emailId){
+    {
+        userDetails{
             firstName,
             lastName,
             emailId,
+            password,
             phoneNumber
         }
     }

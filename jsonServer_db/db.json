@@ -1,0 +1,28 @@
+{
+  "homePage": {
+    "banner": {
+      "bannerImage": [
+        {
+          "url": "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "alt": "Audi Car",
+          "caption": "slide 1"
+        },
+        {
+          "url": "https://images.pexels.com/photos/257840/pexels-photo-257840.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "alt": "Apple",
+          "caption": "slide 2"
+        },
+        {
+          "url": "https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "alt": "Bike",
+          "caption": "slide 3"
+        },
+        {
+          "url": "https://images.pexels.com/photos/2832251/pexels-photo-2832251.jpeg",
+          "alt": "Tembo",
+          "caption": "slide 4"
+        }
+      ]
+    }
+  }
+}

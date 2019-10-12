@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
-import authReducer from './authReducer';
+import { homePageReducer } from '../container/homePage/Reducer';
+import { signupReducer } from '../container/auth/Signup/Reducer';
+// import { loginReducer } from '../container/auth/Login/Reducer';
 
-
-export default combineReducers({
-    auth: authReducer,
-});
+export const rootReducers = combineReducers({
+    homePageState: homePageReducer,
+    signupState: signupReducer
+    // loginReducer
+})
