@@ -16,7 +16,6 @@ import SignUp from './ActionCreator';
 //     })
 // }
 const doGets = (signUpDetails) => {
-    console.log('axios')
     return axios.get(`localhost:3001/api/users`, {
         signUpDetails
     })
@@ -35,19 +34,15 @@ const doGets = (signUpDetails) => {
 // }
 
 export function* signupUser(action) {
-    console.log('saga', action)
     try {
-        console.log('saga')
         const response = yield fetch("https://localhost:3001/api/users", { action })
         yield put(signupSuccess(response));
     } catch (error) {
-        console.log('saga')
         yield put(signupFailure(error))
     }
 }
 
 export function* signupWatcher() {
-    console.log('signupWatcher')
     yield takeLatest(SIGN_UP, signupUser)
-    
+
 }

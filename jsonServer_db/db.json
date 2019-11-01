@@ -3,26 +3,126 @@
     "banner": {
       "bannerImage": [
         {
-          "url": "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-          "alt": "Audi Car",
+          "url": "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/MAX2.O/MAX-Banner1-desktop-Men-13Oct20199.jpg",
+          "alt": "Mens ",
           "caption": "slide 1"
         },
         {
-          "url": "https://images.pexels.com/photos/257840/pexels-photo-257840.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-          "alt": "Apple",
+          "url": "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/MAX2.O/MAX-Banner1-desktop-WW-13Oct20199.jpg",
+          "alt": "Womens",
+          "caption": "slide 1"
+        },
+        {
+          "url": "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.ssl.cF3.rackcdn.com/MAX-Friday/MAX2.O/MAX-Banner1-desktop-Girls-13Oct20199.jpg",
+          "alt": "Girls",
           "caption": "slide 2"
         },
         {
-          "url": "https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-          "alt": "Bike",
-          "caption": "slide 3"
-        },
-        {
-          "url": "https://images.pexels.com/photos/2832251/pexels-photo-2832251.jpeg",
-          "alt": "Tembo",
+          "url": "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/MAX2.O/MAX-Banner1-desktop-Boys-13Oct20199.jpg",
+          "alt": "Boys",
           "caption": "slide 4"
         }
       ]
+    },
+    "services": [
+      {
+        "title": "Card Title 1",
+        "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+        "url": "",
+        "alt": ""
+      },
+      {
+        "title": "Card Title 2",
+        "description": "This card has supporting text below as a natural lead-in to additional content",
+        "url": "",
+        "alt": ""
+      },
+      {
+        "title": "Card Title 3",
+        "description": "This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.",
+        "url": "",
+        "alt": ""
+      }
+    ],
+    "myActivity": [
+      {
+        "title": "Title 1",
+        "description": "lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
+        "url": "",
+        "alt": ""
+      },
+      {
+        "title": "Title 2",
+        "description": "lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
+        "url": "",
+        "alt": ""
+      },
+      {
+        "title": "Title 3",
+        "description": "lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
+        "url": "",
+        "alt": ""
+      }
+    ]
+  },
+  "shopping": {
+    "banner": {
+      "bannerImage": [
+        {
+          "url": "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/MAX2.O/MAX-Banner1-desktop-Men-13Oct20199.jpg",
+          "alt": "Mens ",
+          "caption": "slide 1"
+        },
+        {
+          "url": "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/MAX2.O/MAX-Banner1-desktop-WW-13Oct20199.jpg",
+          "alt": "Womens",
+          "caption": "slide 1"
+        },
+        {
+          "url": "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedAD8AF927.ssl.cF3.rackcdn.com/MAX-Friday/MAX2.O/MAX-Banner1-desktop-Girls-13Oct20199.jpg",
+          "alt": "Girls",
+          "caption": "slide 2"
+        },
+        {
+          "url": "https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.ssl.cf3.rackcdn.com/MAX-Friday/MAX2.O/MAX-Banner1-desktop-Boys-13Oct20199.jpg",
+          "alt": "Boys",
+          "caption": "slide 4"
+        }
+      ]
+    },
+    "category": {
+      "mens": {
+        "tshirt": [
+          {
+            "url": [
+              "https://rukminim1.flixcart.com/image/580/696/jxgflow0/t-shirt/m/z/k/xl-tblgychkhdful-d24-tripr-original-imafhuzmagqfgnrq.jpeg"
+            ],
+            "alt": "Tshirt",
+            "caption": "slide 1"
+          },
+          {
+            "url": [
+              "https://rukminim1.flixcart.com/image/880/1056/jhuvjww0/t-shirt/y/t/7/m-bts038-billion-original-imaf5s96f8qgf3v4.jpeg"
+            ],
+            "alt": "Tshirt",
+            "caption": "slide 1"
+          },
+          {
+            "url": [
+              "https://rukminim1.flixcart.com/image/880/1056/jd94h3k0/t-shirt/y/a/w/m-bts016-billion-original-imaf23t3bahhy8gn.jpeg"
+            ],
+            "alt": "Tshirt",
+            "caption": "slide 1"
+          },
+          {
+            "url": [
+              "https://rukminim1.flixcart.com/image/880/1056/jxgflow0/t-shirt/b/y/e/4xl-tblrdchkhdful-d24-tripr-original-imafhuzjmeujfh46.jpeg"
+            ],
+            "alt": "Tshirt",
+            "caption": "slide 1"
+          }
+        ]
+      }
     }
   }
 }

@@ -7,6 +7,7 @@ import Fieldvalidation from '../../../utils/validation';
 import { signup } from './ActionCreator';
 
 class CreateAccount extends PureComponent {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -50,102 +51,117 @@ class CreateAccount extends PureComponent {
     // navToLoginPage = () => {
     //     this.props.history.push('./login')
     // }
+    //col-sm-10
     render() {
         const { username, email, password } = this.state;
         return (
-            <div className="left-box">
-                <Formik
-                    initialValues={{
-                        username: '',
-                        emailID: '',
-                        newPassword: '',
-                        confirmPassword: '',
-                    }}
-                    validateOnBlur={false}
-                    validateOnChange={false}
-                    validate={(values) => {
-                        let errors = {};
-                        if (values.newPassword !== values.confirmPassword) {
-                            errors.confirmPassword = "confirm password should match password"
-                        }
-                        return errors;
-                    }}
-                    onSubmit={async (values, actions) => {
-                        const { username, emailID, newPassword } = values
-                        const signupInput = {
-                            username,
-                            email: emailID,
-                            password: newPassword
-                        }
-                        this.handleSubmit(signupInput);
-                    }}
-                    render={props => (
-                        <Form >
-                            <h3>Create Account</h3>
-                            <div>
-                                {/* <label>User Name</label> */}
-                                <Field
-                                    className="form-control"
-                                    name="username"
-                                    type="text"
-                                    placeholder="User Name"
-                                    required
-                                    value={props.values.firstName}
-                                    onChange={(ev) => this.handleInputChange(ev, props.setFieldValue)}
+            <div className="row">
+                <div className="col-md-12">
+                    <div className="signup">
+                        <div className="signup-panel">
+                            <div className="card">
+                                <Formik
+                                    initialValues={{
+                                        username: '',
+                                        emailID: '',
+                                        newPassword: '',
+                                        confirmPassword: '',
+                                    }}
+                                    validateOnBlur={false}
+                                    validateOnChange={false}
+                                    validate={(values) => {
+                                        let errors = {};
+                                        if (values.newPassword !== values.confirmPassword) {
+                                            errors.confirmPassword = "confirm password should match password"
+                                        }
+                                        return errors;
+                                    }}
+                                    onSubmit={async (values, actions) => {
+                                        const { username, emailID, newPassword } = values
+                                        const signupInput = {
+                                            username,
+                                            email: emailID,
+                                            password: newPassword
+                                        }
+                                        this.handleSubmit(signupInput);
+                                    }}
+                                    render={props => (
+                                        <div className="card-body p-4">
+                                            <div className="card-title">
+                                                <h3>Create Account</h3>
+                                            </div>
+                                            <div className="row">
+                                                <Form className="col-md-6">
+                                                    <div className="">
+                                                        <div className="form-group">
+                                                            {/* <label>User Name</label> */}
+                                                            <Field
+                                                                className="form-control"
+                                                                name="username"
+                                                                type="text"
+                                                                placeholder="User Name"
+                                                                required
+                                                                value={props.values.firstName}
+                                                                onChange={(ev) => this.handleInputChange(ev, props.setFieldValue)}
+                                                            />
+                                                            <ErrorMessage name="firstName" />
+                                                        </div>
+                                                        <div className="form-group">
+                                                            {/* <label>E-mail</label> */}
+                                                            <Field
+                                                                className="form-control"
+                                                                name="emailID"
+                                                                type="email"
+                                                                placeholder="Email Id"
+                                                                autoComplete="off"
+                                                                required
+                                                                value={props.values.email}
+                                                                onChange={(ev) => this.handleInputChange(ev, props.setFieldValue)}
+                                                            />
+                                                            <ErrorMessage name="emailID" />
+                                                        </div>
+                                                        <div className="form-group">
+                                                            {/* <label>Password</label> */}
+                                                            <Field
+                                                                className="form-control"
+                                                                name="newPassword"
+                                                                type="password"
+                                                                placeholder="Password"
+                                                                autoComplete="off"
+                                                                required
+                                                                value={props.values.password}
+                                                                onChange={(ev) => this.handleInputChange(ev, props.setFieldValue)}
+                                                            />
+                                                            <ErrorMessage name="password" />
+                                                        </div>
+                                                        <div className="form-group">
+                                                            {/* <label>Confirm Password</label> */}
+                                                            <Field
+                                                                className="form-control"
+                                                                name="confirmPassword"
+                                                                type="password"
+                                                                placeholder="Confirm password"
+                                                                autoComplete="off"
+                                                                required
+                                                                value={props.values.confirmEmail}
+                                                                onChange={(ev) => this.handleInputChange(ev, props.setFieldValue)}
+                                                            />
+                                                            <ErrorMessage name="confirmPassword" />
+                                                        </div>
+                                                        {/* <button className="form-submit" type="submit" disabled={props.isSubmitting}>Signup</button> */}
+                                                        <button className="form-submit btn btn-primary" type="submit" >Signup</button>
+                                                    </div>
+                                                </Form>
+                                                <div className="col-md-6 text-center">
+                                                    <h4 className="text-center">Hunger & Debt Ltd</h4>
+                                                    <img src="https://placeimg.com/128/128/tech/sepia" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
                                 />
-                                <ErrorMessage name="firstName" />
-                            </div>
-                            <div>
-                                {/* <label>E-mail</label> */}
-                                <Field
-                                    className="form-control"
-                                    name="emailID"
-                                    type="email"
-                                    placeholder="Email Id"
-                                    autoComplete="off"
-                                    required
-                                    value={props.values.email}
-                                    onChange={(ev) => this.handleInputChange(ev, props.setFieldValue)}
-                                />
-                                <ErrorMessage name="emailID" />
-                            </div>
-                            <div>
-                                {/* <label>Password</label> */}
-                                <Field
-                                    className="form-control"
-                                    name="newPassword"
-                                    type="password"
-                                    placeholder="Password"
-                                    autoComplete="off"
-                                    required
-                                    value={props.values.password}
-                                    onChange={(ev) => this.handleInputChange(ev, props.setFieldValue)}
-                                />
-                                <ErrorMessage name="password" />
-                            </div>
-                            <div>
-                                {/* <label>Confirm Password</label> */}
-                                <Field
-                                    className="form-control"
-                                    name="confirmPassword"
-                                    type="password"
-                                    placeholder="Confirm password"
-                                    autoComplete="off"
-                                    required
-                                    value={props.values.confirmEmail}
-                                    onChange={(ev) => this.handleInputChange(ev, props.setFieldValue)}
-                                />
-                                <ErrorMessage name="confirmPassword" />
-                            </div>
-                            {/* <button className="form-submit" type="submit" disabled={props.isSubmitting}>Signup</button> */}
-                            <button className="form-submit" type="submit" >Signup</button>
 
-                        </Form>
-                    )}
-                />
-                <p>--or--</p>
-
-                {/* <div className="right-box">
+                                {/* <div className="right-box">
                     <h3>Sign in with other options</h3>
 
                     <div className="nav-signin">
@@ -155,6 +171,10 @@ class CreateAccount extends PureComponent {
                         <button className="btn btn-primary">Log-in with Facebook</button>
                     </div>
                 </div> */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

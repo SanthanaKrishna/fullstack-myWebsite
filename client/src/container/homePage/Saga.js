@@ -6,7 +6,7 @@ export const fetchUrl= axios.create({
     baseURL: 'http://localhost:3001'
 })
 // axios.get("http://localhost:3001/homepage")
-export function* homePageApi() {
+export function* homePageAPI() {
     try {
         const response = yield axios.get("http://localhost:3001/homepage")
         yield put(homePageSuccess(response.data))
@@ -16,5 +16,5 @@ export function* homePageApi() {
 }
 
 export function* homePageWatcher() {
-    yield takeLatest(HOMEPAGE_CONTENT, homePageApi)
+    yield takeLatest(HOMEPAGE_CONTENT, homePageAPI)
 }

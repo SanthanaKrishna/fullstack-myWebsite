@@ -15,12 +15,14 @@ export const homePageReducer = (state = initialState, action) => {
         case HOMEPAGE_CONTENT_SUCCESS:
             return {
                 ...state,
-                homePageDate: action.payload
+                homePageDate: action.payload,
+                isLoading: false
             }
         case HOMEPAGE_CONTENT_SUCCESS:
             return {
                 ...state,
-                homePageDate: action.error
+                homePageDate: action.error,
+                isLoading: false
             }
         default:
             return state

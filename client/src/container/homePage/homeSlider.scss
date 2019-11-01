@@ -1,12 +1,127 @@
-.home-header{
-    position: absolute;
-    width: 100%;
-    z-index: 99;
-    .header-heading{
-        color: white;
-    }
+.header-fixed-top {
+  top: 0;
+  border: none;
+  background: white;
+  padding: 0;
+  height: 76px;
 }
 
-.custom-tag{
-    height: 350px;
+.home-header {
+  position: fixed;
+  width: 100%;
+  // top: 0;
+  z-index: 10;
+  transition: all 0.75s;
+  .navbar {
+    background-image: linear-gradient(to right, #a517ba, #5f1782);
+  }
+  .navbar-nav li {
+    padding: 0 10px;
+  }
+  .navbar-nav li a {
+    color: #fff !important;
+    font-weight: 600;
+  }
+  .navbar-toggler-icon {
+    color: #fff !important;
+  }
+}
+
+.banner-img {
+  background-image: linear-gradient(to right, #a517ba, #5f1782);
+  .custom-tag {
+    height: 450px;
+  }
+}
+
+.services {
+  padding: 80px 0;
+  .title {
+    text-align: center;
+    &::before {
+      content: "";
+      background: #7b1798;
+      height: 5px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      transform: translateY(50px);
+    }
+    &::after {
+      content: "";
+      background: #7b1798;
+      height: 10px;
+      width: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+      display: block;
+      transform: translateY(9px);
+    }
+  }
+  .row {
+    text-align: center;
+    margin-top: 20px;
+    .card {
+      transition: all 0.2s ease;
+      &:hover {
+        transform: translateY(5px);
+        box-shadow: 0 1rem 3rem rgba(31, 45, 61, 0.125);
+      }
+    }
+  }
+  .service-button {
+    text-align: center;
+    .btn-primary {
+      box-shadow: none;
+      padding: 8px 25px;
+      border: none;
+      border-radius: 20px;
+      background-image: linear-gradient(to right, #a517ba, #5f1782);
+    }
+  }
+}
+
+.activity {
+  padding: 80px 0;
+  .title {
+    text-align: center;
+    &::before {
+      content: "";
+      background: #7b1798;
+      height: 5px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      transform: translateY(55px);
+    }
+    &::after {
+      content: "";
+      background: #7b1798;
+      height: 10px;
+      width: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+      display: block;
+      transform: translateY(9px);
+    }
+  }
+  .row {
+    text-align: center;
+    .activityClm {
+      padding: 20px;
+      .activity-img {
+        width: 100px;
+        margin-top: 20px;
+      }
+      h4 {
+        padding: 5px;
+        margin-top: 25px;
+        text-transform: uppercase;
+      }
+    }
+  }
 }

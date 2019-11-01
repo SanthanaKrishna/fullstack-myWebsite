@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import CreateAccount from './Signup';
-import './styles.scss';
+import './auth.scss';
 
 class Signup extends Component {
     render() {
         return (
-            <div className="form-container">
-                <CreateAccount />
-                
+            <div className="container create-account" id="create-account">
+                    <CreateAccount />
             </div>
         )
     }

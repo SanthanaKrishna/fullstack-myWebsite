@@ -1,0 +1,30 @@
+.create-account {
+  .signup {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .signup-panel {
+      position: relative;
+      top: 25%;
+      width: 75%;
+      @media (max-width: 767px) {
+        top: 10%; 
+        width: 100%;
+       }
+      //  @media (min-width: 768px) and (max-width: 1023px) {
+
+      //  }
+       
+      .card {
+        box-shadow: 0 7px 14px 0 rgba(59, 65, 94, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);
+        .form-submit {
+          padding: 8px 25px;
+          border: none;
+          border-radius: 20px;
+          background-image: linear-gradient(to left, #74ebd5, #9face6);
+        }
+      }
+    }
+  }
+}

@@ -46,7 +46,6 @@ class BannerImage extends Component {
     render() {
         const { bannerImage = [] } = this.props.banner;
         const { activeIndex, setActiveIndex, animating, setAnimating } = this.state;
-        console.log('bannerImage', bannerImage)
         return (
             <section id="banner-image">
                 <Carousel

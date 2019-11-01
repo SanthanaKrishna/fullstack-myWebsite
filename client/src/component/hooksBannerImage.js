@@ -33,30 +33,36 @@ const Example = (props) => {
 
 
     return (
-        <Carousel
-            activeIndex={activeIndex}
-            next={next}
-            previous={previous}
-        >
-            <CarouselIndicators items={bannerImage} activeIndex={activeIndex} onClickHandler={goToIndex} />
-            {
-                bannerImage.map((item) => {
-                    return (
-                        <CarouselItem
-                            className="custom-tag"
-                            onExiting={() => setAnimating(true)}
-                            onExited={() => setAnimating(false)}
-                            key={item.url}
-                        >
-                            <img src={item.url} alt={item.alt} />
-                            <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-                        </CarouselItem>
-                    );
-                })
-            }
-            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-            <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-        </Carousel>
+        <div className="banner-img" id="banner-image">
+            <Carousel
+                activeIndex={activeIndex}
+                next={next}
+                previous={previous}
+            >
+                <CarouselIndicators items={bannerImage} activeIndex={activeIndex} onClickHandler={goToIndex} />
+                {
+                    bannerImage.map((item) => {
+                        return (
+                            <CarouselItem
+                                className="custom-tag"
+                                onExiting={() => setAnimating(true)}
+                                onExited={() => setAnimating(false)}
+                                key={item.url}
+                            >
+                                <img src={item.url} alt={item.alt} />
+                                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+                                <a href="#">
+                                    <p>Santhana Krishna</p>
+                                    <img src="" className="icofont-ui-play" />
+                                </a>
+                            </CarouselItem>
+                        );
+                    })
+                }
+                <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+                <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+            </Carousel>
+        </div>
     );
 }
 

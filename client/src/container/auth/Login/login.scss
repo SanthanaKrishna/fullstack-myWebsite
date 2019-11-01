@@ -1,0 +1,23 @@
+.login {
+  .card {
+    .card-body {
+      .card-title {
+        margin: auto 0px;
+        p {
+          margin-left: auto;
+        }
+      }
+      .or-login {
+        .or-login-text {
+          text-align: center;
+          left: 50%;
+          background-color: #fff;
+          position: absolute;
+          top: 80%;
+          -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+        }
+      }
+    }
+  }
+}
