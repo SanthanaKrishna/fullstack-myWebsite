@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink, withRouter } from 'react-router-dom';
 import homeSlider from '../container/homePage/homeSlider.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Header extends Component {
 

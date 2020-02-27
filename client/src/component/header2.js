@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.min';
 export default class Exheader extends Component {
     render() {
         return (

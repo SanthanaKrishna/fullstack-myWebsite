@@ -9,6 +9,7 @@ import Login from './container/auth/Login/index';
 import './index.scss';
 import Test from './container/text';
 import Exheader from './component/header2';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const history = createBrowserHistory();
 
@@ -17,15 +18,15 @@ class Root extends React.Component {
         return (
             <React.Fragment>
                 <BrowserRouter>
-                    {/* <Header /> */}
+                    <Header />
                     <div className="body-wrapper">
                         <Switch>
                             <Route path="/" exact component={Homepage} />
                             <Route path='/shopping' component={Shopping} />
                             <Route path="/signup" component={Signup} />
                             <Route path='/login' component={Login} />
-                            <Route path='/Test' component={Test}/>
-                            <Route path='/abc'  component={Exheader}/>
+                            <Route path='/Test' component={Test} />
+                            <Route path='/abc' component={Exheader} />
                         </Switch>
                     </div>
                 </BrowserRouter>
